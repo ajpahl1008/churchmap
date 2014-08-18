@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="PersistenceUnit">
+        <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+        <class>com.pahlsoft.churchmap.dao.InterestsEntity</class>
+        <class>com.pahlsoft.churchmap.dao.ParishionersEntity</class>
+        <class>com.pahlsoft.churchmap.dao.RelationshipFamilyEntity</class>
+        <class>com.pahlsoft.churchmap.dao.RelationshipInterestsEntity</class>
+
+        <properties>
+            <property name="openjpa.ConnectionURL" value="jdbc:mysql://localhost:3306/churchmap"/>
+            <property name="openjpa.ConnectionDriverName" value="com.mysql.jdbc.Driver"/>
+            <property name="openjpa.ConnectionUserName" value="churchmap"/>
+            <property name="openjpa.ConnectionPassword" value="t0ena1ls"/>
+            <property name="openjpa.Log" value="DefaultLevel=ERROR, Tool=ERROR"/>
+            <!-- IMPORTANT PROPERTIES -->
+            <property name="jboss.as.jpa.providerModule" value="org.apache.openjpa"/>
+            <!--<property name="jboss.as.jpa.adapterModule" value="org.jboss.as.jpa.openjpa"/>-->
+            <!--<property name="jboss.as.jpa.adapterClass" value="org.jboss.as.jpa.openjpa.OpenJPAPersistenceProviderAdaptor" />-->
+            <property name="openjpa.DynamicEnhancementAgent" value="false" />
+            <property name="openjpa.RuntimeUnenhancedClasses" value="supported" />
+            <!-- Important property in order OpenJPA to work on JBoss EAP 6.1.x an later -->
+            <!-- see http://openjpa.apache.org/builds/2.2.2/apache-openjpa/docs/manual.html#ref_guide_meta_factory -->
+            <property name="openjpa.MetaDataFactory" value="jpa"/>
+        </properties>
+    </persistence-unit>
+</persistence>

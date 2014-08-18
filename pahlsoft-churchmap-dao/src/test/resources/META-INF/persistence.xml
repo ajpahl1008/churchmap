@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="TestPersistenceUnit">
+        <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+        <class>com.pahlsoft.churchmap.dao.InterestsEntity</class>
+        <class>com.pahlsoft.churchmap.dao.ParishionersEntity</class>
+        <class>com.pahlsoft.churchmap.dao.RelationshipFamilyEntity</class>
+        <class>com.pahlsoft.churchmap.dao.RelationshipInterestsEntity</class>
+
+        <properties>
+            <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
+            <property name="openjpa.ConnectionURL" value="jdbc:derby:memory:churchmap;create=true"/>
+            <property name="openjpa.ConnectionDriverName" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+            <property name="openjpa.Log" value="DefaultLevel=ERROR, Tool=ERROR"/>
+        </properties>
+    </persistence-unit>
+</persistence>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1902158937">
+    <data-source source="LOCAL" name="MySQL - churchmap@localhost" uuid="0e0f39f8-c483-4aa9-a24b-d34b3598226e">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/churchmap</jdbc-url>
+      <user-name>churchmap</user-name>
+      <user-password>dfdedf9adfcfdfc4dfcbdf9bdfc6dfd9</user-password>
+      <driver-properties>
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+      </driver-properties>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="PersistenceUnit" uuid="2c37eba9-3cbd-48c7-a7eb-a07069e69059">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/megaevent</jdbc-url>
+      <user-name>church</user-name>
+      <user-password>dfdedf9adfcfdfc4dfcbdf9bdfc6dfd9</user-password>
+      <libraries>
+        <library>
+          <url>file://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.27/mysql-connector-java-5.1.27.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
+
