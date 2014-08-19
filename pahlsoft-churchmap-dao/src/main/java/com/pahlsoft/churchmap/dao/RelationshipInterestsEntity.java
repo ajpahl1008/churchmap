@@ -3,7 +3,7 @@ package com.pahlsoft.churchmap.dao;
 import javax.persistence.*;
 
 /**
- * Created by aj on 17/08/14.
+ * Created by aj on 18/08/14.
  */
 @Entity
 @Table(name = "RELATIONSHIP_INTERESTS", schema = "", catalog = "churchmap")

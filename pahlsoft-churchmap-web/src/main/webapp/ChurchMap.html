@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map-canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDInHWEFBUsZmsw9_ua5DUYQocj8DU_Afc">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+         	var parishionerData = [
+                  [40.253391,-82.863917,'location1'],
+                  [40.253149,-82.864678,'location2'],
+                  [40.253473,-82.864479,'location3']
+         	];
+        var mapOptions = {
+          center: new google.maps.LatLng(40.253391,-82.863917),
+          zoom: 15
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+
+     for (var i = 0; i < parishionerData.length; i++) {
+         var house = parishionerData[i];
+         var myLatLng = new google.maps.LatLng(house[0], house[1]);
+         var marker = new google.maps.Marker({
+             position: myLatLng,
+             map: map,
+             //icon: image,
+             //shape: shape,
+             title: house[2]
+             //zIndex: beach[3]
+         });
+       }
+/*
+       var marker = new google.maps.Marker({
+	position: heatmapData[1],
+        map: map,
+ 	title: 'Hello AJ'
+        });
+*/
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+    <div id="map-canvas"/>
+  </body>
+</html>
+

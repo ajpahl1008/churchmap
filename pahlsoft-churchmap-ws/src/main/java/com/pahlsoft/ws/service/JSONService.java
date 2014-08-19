@@ -1,5 +1,6 @@
 package com.pahlsoft.ws.service;
 
+import com.pahlsoft.churchmap.dao.ChurchmapParishionersCoordinatesEntity;
 import com.pahlsoft.churchmap.dao.ParishionersEntity;
 
 import java.util.List;
@@ -35,7 +36,7 @@ public class JSONService {
 	@GET
 	@Path("/get/{param}")
 	@Produces("application/json")
-	public List<ParishionersEntity> getParishionerInfo(@PathParam("param") int parishionerId) {
+	public List<ChurchmapParishionersCoordinatesEntity> getParishionerInfo(@PathParam("param") int parishionerId) {
 
         emf = Persistence.createEntityManagerFactory("PersistenceUnit");
 
@@ -43,11 +44,10 @@ public class JSONService {
 
         entityManager.getTransaction().begin();
 
-        Query query = entityManager.createQuery("select p from ParishionersEntity p where p.parishionerId=" + parishionerId);
-        List<ParishionersEntity> parishioners = query.getResultList();
+        Query query = entityManager.createQuery("select p from ChurchmapParishionersCoordinatesEntity p where p.parishionerId  = " + parishionerId);
+        List<ChurchmapParishionersCoordinatesEntity> parishioners = query.getResultList();
 
         return parishioners;
-
 	}
  
 	@POST

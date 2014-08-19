@@ -13,6 +13,7 @@
   <modules>
     <module>pahlsoft-churchmap-ws</module>
     <module>pahlsoft-churchmap-dao</module>
+    <module>pahlsoft-churchmap-web</module>
   </modules>
 
   <properties>
